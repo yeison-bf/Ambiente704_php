@@ -1,65 +1,86 @@
 <?php
 
-/*
-    Arraya
-    Arreglos Asociativos
-*/
+    /*
 
-$NombreArrego  = Array(
-    "Nombre" => "Sandra Isabel",
-    "Apellidos" => "Herazo Castro",
-    "Edad" => 23,
-    "Cargo" => "Aprendiz"
-);
+            Arreglo:
+                - Arreglo();
+                - Arreglos asociativos();
 
-var_dump($NombreArrego);
-echo "<hr>";
+    */
 
-foreach ($NombreArrego as $value) {
-    echo $value."<br>";
-}
+    $nombreArreglo = Array(
+        1 => 10,
+        "2" => 20,
+        '3' => 30,
+        4 => 40,
+        "5" => 50,
+        6 => 60,
+    );
 
-echo "<br>";
-echo "<br>";
-echo "<hr>";
-echo "<h1>Arreglos asociativos</h1>";
-
-
-$NombreArregoPrincipal  = Array(
-    $NombreArrego  = Array(
-        "Nombre" => "Kamila",
-        "Apellidos" => "Londoño",
-        "Edad" => 23,
-        "Cargo" => "Aprendiz"
-    ),
-    $NombreArrego  = Array(
-        "Nombre" => "Heidy",
-        "Apellidos" => "Florez",
-        "Edad" => 23,
-        "Cargo" => "Aprendiz"
-    ),
-    $NombreArrego  = Array(
-        "Nombre" => "Elisabeth",
+    $nombreArregloUsuarios = Array(
+        "Nombre"    => "Elisabeth",
         "Apellidos" => "Velasquez",
-        "Edad" => 23,
-        "Cargo" => "Aprendiz"
-    )
-);
+        "Edad"      => "20",
+        "Direccion" => "Medellin",
+        "Rol"       => "Aprendiz",
+    );
+
+    var_dump($nombreArregloUsuarios);
+    echo "<br>";
+    echo "<br>";
+
+    foreach ($nombreArregloUsuarios as $value) {
+        echo $value."<br>";
+    }
+
+    echo "<br>";
+    echo "<h1>Arreglos asociativos</h1>";
+
+    $nombreArregloUsuariosAgrupados = Array(
+        $Aprendiz = Array(
+            "Nombre"    => "Elisabeth",
+            "Apellidos" => "Velasquez",
+            "Edad"      => "20",
+            "Direccion" => "Medellin",
+            "Rol"       => "Aprendiz",
+        ),
+        $Aprendiz = Array(
+            "Nombre"    => "Ingrid",
+            "Apellidos" => "Loaiza",
+            "Edad"      => "28",
+            "Direccion" => "Medellin",
+            "Rol"       => "Aprendiz",
+        ), 
+        $Aprendiz = Array(
+            "Nombre"    => "Maria Camila",
+            "Apellidos" => "Londoño",
+            "Edad"      => "18",
+            "Direccion" => "Medellin",
+            "Rol"       => "Aprendiz",
+        ), 
+        $Aprendiz = Array(
+            "Nombre"    => "Daniel",
+            "Apellidos" => "Garcia",
+            "Edad"      => "20",
+            "Direccion" => "Medellin",
+            "Rol"       => "Monitor",
+        )
+    );
+  
+    var_dump($nombreArregloUsuariosAgrupados);
+    echo "<br>";
+    echo "<br>";
 
 
-//var_dump($NombreArregoPrincipal);
-
-foreach ($NombreArregoPrincipal as $i => $value) {
-    echo (" 
-        <table border='1'>
-            <tbody>
-                <tr>
-                    <td>".$NombreArregoPrincipal[$i]["Nombre"]."</td>
-                    <td>".$NombreArregoPrincipal[$i]["Apellidos"]."</td>
-                    <td>".$NombreArregoPrincipal[$i]["Edad"]."</td>
-                    <td>".$NombreArregoPrincipal[$i]["Cargo"]."</td>
-                </tr>
-            </tbody>
-        </table>
-    ");
-}
+    foreach ($nombreArregloUsuariosAgrupados as $key => $value) {
+            echo " <table border='1'>
+                        <tr>
+                            <td width='100px'>".$nombreArregloUsuariosAgrupados[$key]['Nombre']."</td> 
+                            <td width='100px'>".$nombreArregloUsuariosAgrupados[$key]['Apellidos']."</td> 
+                            <td width='100px'>".$nombreArregloUsuariosAgrupados[$key]['Edad']."</td> 
+                            <td width='100px'>".$nombreArregloUsuariosAgrupados[$key]['Direccion']."</td> 
+                            <td width='100px'>".$nombreArregloUsuariosAgrupados[$key]['Rol']."</td> 
+                        </tr>
+                    </table> ";
+        };
+    
